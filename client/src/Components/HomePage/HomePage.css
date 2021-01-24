@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
-}
 
+.right{
+    right: 0;
+    height: 10px;
+    float: left;
+    width: 50vw;
+}
+.left{
+    left: 0;
+    height: 100px;
+    float: left;
+    width: 1000px;
+    position: relative;
+    
+}
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    
+    width: 600px;
+    height: 900px;
+    background: transparent url('C:\Users\leene\Documents\Projects\apprenticeship-team-b\client\src\10x.jpeg') 0% 0% no-repeat padding-box;
+    margin-top:80px;
+    margin-left:350px;
+    opacity: 1;
+    float:left;  
+  
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.clear{
+    clear:both;
 }
-
+/*
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  background-color: black; 
+}*/
 
+
+p{
+margin-left: 1050px;
+margin-top:401px;
+width: 346px;
+height: 10px;
+font: normal normal normal 64px/71px Palatino;
+letter-spacing: 0px;
+color: #006238;
+float:left;
+opacity: 1;
+display: inline;
+
+}
+button{
+
+margin-left: 1150px;
+/*margin-bottom: 521px;*/
+width: 110px;
+height: 50px;
+margin-top: 20px;
+/*margin-right: 578px;*/
+font: normal normal normal 32px/39px Verdana;
+letter-spacing: 0px;
+color: #006238;
+opacity: 1;
+background: #ffffff 0% 0% no-repeat padding-box;
+border: 3px solid #006238;
+border-radius: 16px;
+float:left;
+display: inline;
+}
 .App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    color: #61dafb;
 }
