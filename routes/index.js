@@ -1,9 +1,11 @@
 const express = require("express");
 const router = express.Router();
-
+var Post=require('../models/product')
 /* GET home page. */
-router.get("/", function (req, res, next) {
-	res.render("index", { title: "Express" });
+router.get("/postsapi", function (req, res, next) {
+	Post.find({}).then(model => {   // <-- Update to your call of choice.
+		res.json({model});
+	});
 });
 
 module.exports = router;
