@@ -1,42 +1,42 @@
-var Product=require('../models/product')
+var Post=require('../models/post')
 var mongoose=require('mongoose')
 mongoose.connect('mongodb://localhost:27017/teamb', {useNewUrlParser: true, useUnifiedTopology: true});
 var posts = [
-    new Product({
+    new Post({
         name:'jasmeeth',
         location:'hyderabad',
         imagePath:'C:\Users\lenovo\Desktop\images\bikes.jpg',
         date:new Date() ,
         message:'bike..'}),
-    new Product({
+    new Post({
         name:'hemanth',
         location:'chennai',
         imagePath:'C:\Users\lenovo\Desktop\images\bikes1.jpg',
         date:new Date() ,
         message:'bikes '
     }),
-    new Product({
+    new Post({
         name:'vaishnavi',
         location:'nellore',
         imagePath:'C:\Users\lenovo\Desktop\images\car.jpg',
         date:new Date() ,
         message:'first car'
     }),
-    new Product({
+    new Post({
         name:'leenesh',
         location:'madhya pradesh',
         imagePath:'C:\Users\lenovo\Desktop\images\dog.jpg',
         date:new Date() ,
         message:'vacation time'
     }),
-    new Product({
+    new Post({
         name:'vinthai',
         location:'tamil nadu',
         imagePath:'C:\Users\lenovo\Desktop\images\car1.jpg',
         date:new Date() ,
         message:'car...'
     }),
-    new Product({
+    new Post({
         name:'vineeth',
         location:'hyderabad',
         imagePath:'C:\Users\lenovo\Desktop\images\car1.jpg',
