@@ -6,12 +6,14 @@ var posts = [
         name:'jasmeeth',
         location:'hyderabad',
         imagePath:'C:\Users\lenovo\Desktop\images\bikes.jpg',
+        likes:0,
         date:new Date() ,
         message:'bike..'}),
     new Post({
         name:'hemanth',
         location:'chennai',
         imagePath:'C:\Users\lenovo\Desktop\images\bikes1.jpg',
+        likes:0,
         date:new Date() ,
         message:'bikes '
     }),
@@ -19,6 +21,7 @@ var posts = [
         name:'vaishnavi',
         location:'nellore',
         imagePath:'C:\Users\lenovo\Desktop\images\car.jpg',
+        likes:0,
         date:new Date() ,
         message:'first car'
     }),
@@ -26,6 +29,7 @@ var posts = [
         name:'leenesh',
         location:'madhya pradesh',
         imagePath:'C:\Users\lenovo\Desktop\images\dog.jpg',
+        likes:0,
         date:new Date() ,
         message:'vacation time'
     }),
@@ -33,6 +37,7 @@ var posts = [
         name:'vinthai',
         location:'tamil nadu',
         imagePath:'C:\Users\lenovo\Desktop\images\car1.jpg',
+        likes:0,
         date:new Date() ,
         message:'car...'
     }),
@@ -40,6 +45,7 @@ var posts = [
         name:'vineeth',
         location:'hyderabad',
         imagePath:'C:\Users\lenovo\Desktop\images\car1.jpg',
+        likes:0,
         date:new Date() ,
         message:'car...'
     })
