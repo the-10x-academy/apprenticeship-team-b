@@ -7,7 +7,16 @@ const logger = require("morgan");
 const indexRouter = require("./routes/index");
 
 const app = express();
-
+var mongoose=require('mongoose')
+mongoose.connect('mongodb://localhost:27017/teamb')
+mongoose.Promise=global.Promise;
+var db=mongoose.connection
+db.on('connected',function(){
+	console.log('mongodb is connected')
+})
+db.off('error',function(){
+	console.log('mongoose default connection done')
+})
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
