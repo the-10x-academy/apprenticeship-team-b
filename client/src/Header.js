@@ -9,7 +9,8 @@ function Header(){
     return (
     <div id = "head">
         <div id = "insta">
-        <img src = {icon} id = "icon"></img>Instaclone
+        <img src = {icon} id = "icon"></img>
+        <text id = "txt">Instaclone</text>
         </div>
         <img src = {camera} id = "camera"></img>
     </div>
