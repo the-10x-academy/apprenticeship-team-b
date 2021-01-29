@@ -42,6 +42,7 @@
   align-items: center; /* align vertical */
 }
 .postpage_box{
+  
   margin-top: 200px;
   width: 800px;
   height: 740px;
@@ -52,9 +53,7 @@
 }
 .postpage_name{
   margin-top: 23px;
-  margin-left: 32px;
-  width: 58px;
-  height: 28px;
+  padding-left: 32px;
   text-align: left;
   font: normal normal bold 28px/34px Helvetica;
   letter-spacing: 0px;
@@ -63,9 +62,7 @@
 }
 .postpage_location{
   margin-top: 0.5px;
-margin-left: 32px;
-width: 123px;
-height: 29px;
+  padding-left: 32px;
   text-align: left;
 font: normal normal normal 24px/29px Verdana;
 letter-spacing: 0px;
@@ -74,9 +71,7 @@ opacity: 1;
 }
 .postpage_message{
   margin-top: 20px;
-margin-left: 32px;
-width: 450px;
-height: 28px;
+  padding-left: 32px;
 text-align: left;
 font: normal normal bold 28px/34px Helvetica;
 letter-spacing: 0px;
@@ -86,9 +81,7 @@ opacity: 1;
 .postpage_date{
   display: inline-block;
   margin-top: 16px;
-  margin-left: 500px;
-width: 124px;
-height: 24px;
+  padding-left: 500px;
 font: normal normal normal 20px/24px Verdana;
 letter-spacing: 0px;
 color: #000000;
@@ -104,17 +97,14 @@ border: 1px solid #707070;
 opacity: 1;
 }
 .postpage_heart{
-  margin-top: 0px;
+  display: inline-block;
   text-align:left;
-  margin-left: -20px;
 width: 32px;
 height: 32px;
 }
 .postpage_likes{
   margin-top: 0px;
-margin-left: 32px;
-width: 77px;
-height: 24px;
+  padding-left: 32px;
   text-align: left;
 font: normal normal normal 20px/24px Verdana;
 letter-spacing: 0px;
@@ -123,7 +113,8 @@ opacity: 1;
 }
 .postpage_share{
   margin-top: 16px;
-  margin-left: 30px;
+  text-align: left;
+  padding-left: 32px;
 width: 32px;
 height: 32px;
 background:  0% 0% no-repeat padding-box;
