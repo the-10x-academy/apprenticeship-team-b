@@ -31,8 +31,7 @@
 #txt{
     padding-left:10px;
     vertical-align: text-bottom;
-    font-family: Palatino;
-    font-size: 64px;
+    font : normal normal normal 64px/71px Palatino;
     letter-spacing: 0px;
     color: #006238;
     opacity: 1;
