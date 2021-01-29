@@ -12,8 +12,8 @@
     align-content: right;
     margin-top: 40px;
     margin-bottom: 33px;
-    margin-right: 10.4vmin;
-    margin-left: 87vmin;
+    margin-right: 10vmin;
+    margin-left: 86vmin;
     width: 48px;
     height: 48px;
     background: transparent url('./camera.png') 0% 0% no-repeat padding-box;
@@ -34,8 +34,8 @@
 #txt{
     padding-left:10px;
     justify-content: center;
-    vertical-align: 1vh;
-    font: normal normal normal 64px/71px Palatino;
+    vertical-align: text-bottom;
+    font: normal normal normal 64px/71px "./fonts/Palatino.ttf";
     letter-spacing: 0px;
     color: #006238;
     opacity: 1;
