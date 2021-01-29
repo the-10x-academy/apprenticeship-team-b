@@ -6,9 +6,9 @@ class Landing_page extends React.Component{
   render(){
     return(
       <div >
-		  <Post_page />
-          <Post_page />
-          <Post_page />
+        <Post_page />
+        <Post_page />
+        <Post_page />
     </div>
     )
   }
