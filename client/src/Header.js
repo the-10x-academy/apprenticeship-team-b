@@ -10,7 +10,7 @@ function Header(){
     <div id = "head">
         <div id = "insta">
         <img src = {icon} id = "icon"></img>
-        <text id = "txt">Instaclone</text>
+        <text id = "logo">Instaclone</text>
         </div>
         <img src = {camera} id = "camera"></img>
         
