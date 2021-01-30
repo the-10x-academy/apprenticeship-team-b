@@ -13,7 +13,6 @@ function Header(){
         <text id = "logo">Instaclone</text>
         </div>
         <img src = {camera} id = "camera"></img>
-        
     </div>
     );
 }
