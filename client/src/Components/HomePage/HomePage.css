@@ -40,83 +40,97 @@
     display: flex;
   justify-content: center; /* align horizontal */
   align-items: center; /* align vertical */
+
 }
 .postpage_box{
-  
-  margin-top: 200px;
-  width: 800px;
-  height: 740px;
+    display: flex;
+  margin-top: 100px;
+  width: 400px;
+  height: 300px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 1px solid #707070;
   border-radius: 10px;
   opacity: 1;
+  flex-direction: column;
+
 }
 .postpage_name{
-  margin-top: 23px;
-  padding-left: 32px;
+  margin-top: 4px;
   text-align: left;
-  font: normal normal bold 28px/34px Helvetica;
+  font: normal normal bold 18px/24px Helvetica;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
 }
 .postpage_location{
-  margin-top: 0.5px;
-  padding-left: 32px;
+  margin-top: 3.5px;
   text-align: left;
-font: normal normal normal 24px/29px Verdana;
+font: normal normal normal 18px/24px Verdana;
 letter-spacing: 0px;
 color: #707070;
 opacity: 1;
 }
 .postpage_message{
-  margin-top: 20px;
-  padding-left: 32px;
-text-align: left;
-font: normal normal bold 28px/34px Helvetica;
+  margin-top: 5px;
+font: normal normal bold 18px/24px Helvetica;
 letter-spacing: 0px;
 color: #000000;
 opacity: 1;
 }
-.postpage_date{
-  display: inline-block;
-  margin-top: 16px;
-  padding-left: 500px;
-font: normal normal normal 20px/24px Verdana;
-letter-spacing: 0px;
-color: #000000;
-opacity: 1;
-}
-.postpage_image{
-  margin-top: 20px;
-text-align: left;
-width: 800px;
-height: 400px;
-background: transparent  0% 0% no-repeat padding-box;
-border: 1px solid #707070;
-opacity: 1;
-}
-.postpage_heart{
-  display: inline-block;
-  text-align:left;
-width: 32px;
-height: 32px;
-}
+
 .postpage_likes{
-  margin-top: 0px;
-  padding-left: 32px;
-  text-align: left;
-font: normal normal normal 20px/24px Verdana;
+  margin-top: 2px;
+font: normal normal normal 12px/16px Verdana;
 letter-spacing: 0px;
 color: #707070;
 opacity: 1;
 }
+
+.postpage_nameLoc{
+    padding-left: 20px;
+    text-align: left;
+}
+
+.postpage_bikediv{
+    display: flex;
+    margin-top: 3px;
+     border: 1px solid #707070;
+     background-size: 100% 100%;
+width: 400px;
+height:300px;
+
+}
+.Landingpage_div{
+    display:flex;
+    flex-direction: column;
+}
+.postpage_messagelikes{
+    padding-left: 20px;
+    text-align: left;
+}
+.postpage_heartshare{
+    margin-top: 10px;
+    display: inline-block;
+    text-align: left;
+    padding-left: 20px;
+}
+.postpage_heart{
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+}
 .postpage_share{
-  margin-top: 16px;
-  text-align: left;
-  padding-left: 32px;
-width: 32px;
-height: 32px;
-background:  0% 0% no-repeat padding-box;
+    padding-left: 20px;
+    opacity: 1;
+    width: 20px;
+height: 20px;
+}
+.postpage_date{
+    display: inline;
+    padding-left: 220px;
+    font: normal normal normal 12px/15px Verdana;
+letter-spacing: 0px;
+color: #000000;
 opacity: 1;
+    
 }
