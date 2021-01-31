@@ -1,6 +1,6 @@
 import React from "react";
 import icon from "./icon.png";
-import camera from "./camera.png";
+
 import "./header.css";
 
 
@@ -12,7 +12,7 @@ function Header(){
         <img src = {icon} id = "icon"></img>
         <text id = "logo">Instaclone</text>
         </div>
-        <img src = {camera} id = "camera"></img>
+        <button id = "camera"></button>
     </div>
     );
 }

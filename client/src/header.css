@@ -23,7 +23,11 @@
 }
 
 #camera{
-    display: flex;
     margin-right: 200px;
+    margin-top: 23px;
+    border: none;
+    width: 52px;
+    height: 49px;
+    background: transparent url('./camera.png') 0% 0% no-repeat padding-box;
     opacity: 1;
 }
