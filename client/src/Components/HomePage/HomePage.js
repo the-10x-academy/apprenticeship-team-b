@@ -2,22 +2,27 @@ import logo from "../../10x.jpeg";
 import "./HomePage.css";
 import React from "react";
 
+
 function HomePage() {
 	return (
-		<div className="App">
-			<header className="App-header">
-				<div className="left">
-				<img src={logo} className="App-logo" alt="logo" />
-				</div>
-				<div className="clear"></div>
-				<div className="right">
-				<p>10x Team 04</p>
-				<button onclick=" ">Enter</button>
+		<div className="home">
+			<div className="body">
+				<img className="all" src={logo} alt="here"></img>
 				
+
+				<div className="right">
+					<div>
+						<center>
+							<h1 className="header">10x Team 02</h1>
+
+							<button className="bbutton">Enter</button>
+						</center>
+
+						
+					</div>
 				</div>
-			</header>
+			</div>
 		</div>
 	);
 }
-
 export default HomePage;

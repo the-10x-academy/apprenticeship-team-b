@@ -1,68 +1,55 @@
+.home {
+    display:flex;
+	display: grid;
+	place-items: center;
+	background-color: #ffffff;
+	height: 100vh;
+}
 
-.right{
-    right: 0;
-    height: 10px;
-    float: left;
-    width: 50vw;
+.body {
+	display: flex;
+	background-color: #ffffff;
+	height: 87vh;
+	width: 59vw;
 }
-.left{
-    left: 0;
-    height: 100px;
-    float: left;
-    width: 1000px;
-    position: relative;
-    
+.bbutton {
+	display: flex;
+	width: 17vh;
+	height: 7vh;
+	padding: 0vh 1vh 1vh 1vh;
+	font: normal normal normal 5vh/6vh Verdana;
+	
+	letter-spacing: 0px;
+	color: #006238;
+	opacity: 1;
+	background: #ffffff;
+	border: 0.6vh solid #006238;
+	border-radius: 2vh;
+	text-align: center;
 }
-.App-logo {
-    
-    width: 55vh;
-    height: 80vh;
-   margin-top:80px;
-    margin-left:50vh;
-    opacity: 1;
-    float:left;  
-  
+
+.header {
+    display: flex;
+
+	font: normal normal normal 8vh/12vh Palatino;
+	letter-spacing: 0px;
+	color: #006238;
+	opacity: 1;
+	margin-bottom: 3vh;
 }
-.clear{
-    clear:both;
+
+.all {
+	flex: 0.6;
+	display: flex;
+	
 }
-/*
-.App-header {
-  background-color: black; 
-}*/
 
 
-p{
-margin-left: 115vh;
-margin-top:25vh;
-width: 340px;
-height: 12px;
-font: normal normal normal 64px/71px Palatino;
-letter-spacing: 0px;
-color: #006238;
-float:left;
-opacity: 1;
-display: inline;
+.right {
+	flex: 0.5;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
 
-}
-button{
-
-margin-left: 130vh;
-/*margin-bottom: 521px;*/
-width: 110px;
-height: 50px;
-margin-top: 20px;
-/*margin-right: 578px;*/
-font: normal normal normal 32px/39px Verdana;
-letter-spacing: 0px;
-color: #006238;
-opacity: 1;
-background: #ffffff 0% 0% no-repeat padding-box;
-border: 3px solid #006238;
-border-radius: 16px;
-float:left;
-display: inline;
-}
-.App-link {
-    color: #61dafb;
+	padding: 22vh 0vh 0vh 10vh;
 }
