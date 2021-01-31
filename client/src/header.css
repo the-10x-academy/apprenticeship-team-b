@@ -24,7 +24,6 @@
 }
 
 #camera{
-    margin-right: 200px;
     opacity: 1;
 }
 
@@ -32,4 +31,5 @@
     border: none;
     opacity: 1;
     background: transparent;
+    margin-right:200px;
 }
