@@ -45,8 +45,8 @@
 .postpage_box{
     display: flex;
   margin-top: 100px;
-  width: 400px;
-  height: 300px;
+  width: 420px;
+  height: 400px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 1px solid #707070;
   border-radius: 10px;
@@ -55,15 +55,15 @@
 
 }
 .postpage_name{
-  margin-top: 4px;
+  margin-top: 12px;
   text-align: left;
-  font: normal normal bold 18px/24px Helvetica;
+  font: normal normal bold 17px/24px Helvetica;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
 }
 .postpage_location{
-  margin-top: 3.5px;
+  margin-top: 10px;
   text-align: left;
 font: normal normal normal 18px/24px Verdana;
 letter-spacing: 0px;
@@ -87,7 +87,7 @@ opacity: 1;
 }
 
 .postpage_nameLoc{
-    padding-left: 20px;
+    padding-left: 23px;
     text-align: left;
 }
 
@@ -96,7 +96,7 @@ opacity: 1;
     margin-top: 3px;
      border: 1px solid #707070;
      background-size: 100% 100%;
-width: 400px;
+width: 420px;
 height:300px;
 
 }
