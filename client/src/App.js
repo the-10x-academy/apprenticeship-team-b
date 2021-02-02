@@ -1,12 +1,21 @@
 import React from 'react'
-import Header from './Header'
-import LandingPage from './Components/HomePage/LandingPage'
+import {
+	BrowserRouter as Router,
+	Route,
+	Switch,
+	Link,
+	Redirect,
+} from "react-router-dom";
+import UploadHeader from './UploadHeader'
+import Postlist from './Postlist'
 function App(){
     return(
-        <div>
-            <Header />
-            <LandingPage />
-        </div>
+        <Router>
+        <Switch>
+            <Route exact path ="/posts/create" component = {UploadHeader}/>
+            <Route exact path="/posts" component={Postlist} />
+        </Switch>
+    </Router>
     );
 }
 export default App;
