@@ -3,11 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./Components/HomePage/HomePage";
 import Header from "./Header.js";
+import Upload from './Upload.js'
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
 	<React.StrictMode>
 		<Header />
+		<Upload />
 	</React.StrictMode>,
 	document.getElementById("root"),
 );
