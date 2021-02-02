@@ -6,9 +6,9 @@ import {
 	Link,
 	Redirect,
 } from "react-router-dom";
-import Homepage from './Homepage'
-import UploadHeader from './UploadHeader'
-import Postlist from './Postlist'
+import Homepage from './Components/Home/HomePage'
+import UploadHeader from './Components/upload/UploadHeader'
+import Postlist from './Components/Landing/Postlist'
 function App(){
     return(
         <Router>
