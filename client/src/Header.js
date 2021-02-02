@@ -2,7 +2,7 @@ import React from "react";
 import icon from "./icon.png";
 import camera from "./camera.png"
 import "./header.css";
-
+import { Link } from "react-router-dom";
 
 
 function Header(){
@@ -13,7 +13,8 @@ function Header(){
         <img src = {icon} id = "icon"></img>
         <text id = "logo">Instaclone</text>
         </div>
-        <button class = "buttons"><img src = {camera} id = "camera"></img></button>
+        <Link to="/posts/create" style={{ textDecoration: "none" }}><button class = "buttons"><img src = {camera} id = "camera"></img></button></Link>
+        
     </div>
     );
 }
