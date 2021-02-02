@@ -5,24 +5,17 @@ import React from "react";
 
 function HomePage() {
 	return (
-		<div className="home">
-			<div className="body">
-				<img className="all" src={logo} alt="here"></img>
+		<div >
+				<img className="All" src={logo} alt="here"></img>				
 				
-
-				<div className="right">
-					<div>
-						<center>
-							<h1 className="header">10x Team 02</h1>
+							<div className="Alpa">10x Team 02</div>
 
 							<button className="bbutton">Enter</button>
-						</center>
+						</div>
 
 						
-					</div>
-				</div>
-			</div>
-		</div>
+					
+				
 	);
 }
 export default HomePage;
