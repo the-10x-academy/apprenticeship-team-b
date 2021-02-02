@@ -7,7 +7,6 @@ function Postlist(){
         <div>
             <Header />
             <LandingPage />
-            <Upload />
         </div>
     );
 }
