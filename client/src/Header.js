@@ -7,7 +7,6 @@ import "./header.css";
 
 function Header(){
     return (
-        
     <div id = "head">
         <div id = "insta">
         <img src = {icon} id = "icon"></img>
