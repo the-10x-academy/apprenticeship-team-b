@@ -30,7 +30,7 @@
 }
 .homepageenter{
     display: flex;
-	width: 17vh;
+	width: 16vh;
 	height: 8vh;
 	
 	font: normal normal normal 4.5vh/6vh Verdana;
@@ -41,5 +41,5 @@
 	border: 0.5vh solid #006238;
 	border-radius: 2vh;
     text-align: center;
-    padding: 0.5vh 1vh 1vh 1vh;
+    padding: 0vh 1vh 1vh 1vh;
 }
