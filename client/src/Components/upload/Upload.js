@@ -1,5 +1,6 @@
 import React, {useRef} from 'react'
 import "./uploadpage.css";
+import Axios from 'axios';
 class Upload extends React.Component{
     constructor(){
         super()
@@ -8,8 +9,7 @@ class Upload extends React.Component{
             location:'',
             message:'',
             imagepath:'',
-            likes:0,
-            post:[]
+            likes:0
     
     }
     }
@@ -36,19 +36,19 @@ class Upload extends React.Component{
     }
     createpost=(e)=>{
         e.preventDefault();
-        const newpost=[]
-        newpost.push({
-            name:this.state.name,
-            location:this.state.location,
-            message:this.state.message,
-            imagepath:this.state.imagepath,
-            likes:this.state.likes
-        });
-        this.setState({post:newpost})
+        const newpost=new FormData()
+        newpost.append("name",this.state.name)
+        newpost.append("location",this.state.location)
+        newpost.append("message",this.state.message)
+        newpost.append("imagepath",this.state.fileSelect)
+        newpost.append("likes",this.state.likes)
+        console.log(newpost)
+        Axios.post("https://httpbin.org/anything",newpost).then(res=>console.log(res)).catch(err=>console.log(err))
     }
     render(){
         console.log(this.state.post)
         return(
+            <form action='#'>
             <div className='uploadParent' >
                 <div className='uploadBox'>
                     <div className='uploadImg'>
@@ -68,6 +68,8 @@ class Upload extends React.Component{
                     </div>
                 </div>
             </div>
+            </form>
+
         )
     }
 
