@@ -1,6 +1,6 @@
 import React from 'react'
 import './landing.css';
-import PostPage from '../Post/Postpage'
+import PostPage from '../Post/Post'
 class Postlistpage extends React.Component{
   
   render(){
