@@ -1,9 +1,12 @@
 #head{
-    position: static;
+    position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: white;
     display: flex;
     border-bottom: 1px solid #006238;
-    padding-bottom: 33px;
-    margin-top: 25px;
+    padding-top: 10px;
+    padding-bottom: 20px;
     margin-left: 0px;
     justify-content: space-between;
     vertical-align: center;
