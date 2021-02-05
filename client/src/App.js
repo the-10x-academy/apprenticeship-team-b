@@ -5,7 +5,7 @@ import {
 	Switch
 } from "react-router-dom";
 import Home from './Components/Home/Home'
-import UploadHeader from './Components/upload/Uploadheader'
+import UploadHeader from './Components/upload/Uploadh'
 import Postlist from './Components/Landing/Postlist'
 function App(){
     return(
