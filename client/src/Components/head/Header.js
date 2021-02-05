@@ -10,10 +10,10 @@ function Header(){
         
     <div id = "head">
         <div id = "insta">
-        <img src = {icon} id = "icon"></img>
+        <img src = {icon} id = "icon" alt=''></img>
         <text id = "logo">Instaclone</text>
         </div>
-        <Link to="/posts/create" style={{ textDecoration: "none" }}><button class = "buttons"><img src = {camera} id = "camera"></img></button></Link>
+        <Link to="/posts/create" style={{ textDecoration: "none" }}><button class = "buttons"><img src = {camera} id = "camera" alt=''></img></button></Link>
         
     </div>
     );
