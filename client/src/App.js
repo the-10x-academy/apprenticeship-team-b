@@ -4,7 +4,7 @@ import {
 	Route,
 	Switch
 } from "react-router-dom";
-import Homepage from './Components/Home/Homepage'
+import Home from './Components/Home/Home'
 import UploadHeader from './Components/upload/Uploadheader'
 import Postlist from './Components/Landing/Postlist'
 function App(){
