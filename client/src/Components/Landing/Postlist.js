@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../head/Header'
-import LandingPage from './LandingPage'
+import LandingPage from './Postlistpage'
 function Postlist(){
     return(
         <div>
