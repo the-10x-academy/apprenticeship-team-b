@@ -2,9 +2,7 @@ import React from 'react'
 import {
 	BrowserRouter as Router,
 	Route,
-	Switch,
-	Link,
-	Redirect,
+	Switch
 } from "react-router-dom";
 import Homepage from './Components/Home/Homepage'
 import UploadHeader from './Components/upload/Uploadheader'
