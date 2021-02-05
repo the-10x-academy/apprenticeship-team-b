@@ -45,7 +45,7 @@ class Upload extends React.Component{
         newpost.append("imagepath",this.state.imagepath)
         newpost.append("likes",this.state.likes)
         console.log(newpost)
-        Axios.post("https://httpbin.org/anything",newpost).then(res=>console.log(res)).catch(err=>console.log(err))
+        //Axios.post("https://httpbin.org/anything",newpost).then(res=>console.log(res)).catch(err=>console.log(err))
     }
     render(){
         console.log(this.state.post)
