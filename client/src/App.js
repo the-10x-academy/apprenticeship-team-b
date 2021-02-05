@@ -11,7 +11,7 @@ function App(){
     return(
         <Router>
         <Switch>
-        <Route exact path="/" component={Homepage} />
+        <Route exact path="/" component={Home} />
             <Route exact path ="/posts/create" component = {UploadHeader}/>
             <Route exact path="/posts" component={Postlist} />
         </Switch>
