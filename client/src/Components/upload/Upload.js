@@ -66,7 +66,14 @@ class Upload extends React.Component{
                         <input onChange={this.handleMessage} className='uploadM' placeholder='Description' ></input>
                     </div>
                     <div className='uploadPost'>
-                        <button onClick={this.createpost} className='uploadpostB' >Post</button>
+                        <button onClick={this.createpost} className={
+                            this.state.name!==''&&
+                            this.state.location!== ''&&
+                            this.state.message!==''&&
+                            this.state.imagepath!==''
+                            ? "uploadcolorbutton"
+                            :"uploadpostB"
+                            } >Post</button>
                     </div>
                 </div>
             </div>
