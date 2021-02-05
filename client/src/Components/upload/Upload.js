@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React from 'react'
 import "./uploadpage.css";
 import Axios from 'axios';
 class Upload extends React.Component{
@@ -9,7 +9,8 @@ class Upload extends React.Component{
             location:'',
             message:'',
             imagepath:'',
-            likes:0
+            likes:0,
+            filename:'No file choosen'
     
     }
     }
@@ -17,6 +18,7 @@ class Upload extends React.Component{
         this.setState({
             imagepath:e.target.files[0]
         })
+        this.setState({filename:e.target.files[0].name})
         console.log(e.target.files[0])
     }
     handleName=(e)=>{
@@ -52,7 +54,7 @@ class Upload extends React.Component{
             <div className='uploadParent' >
                 <div className='uploadBox'>
                     <div className='uploadImg'>
-                    <input  placeholder='No file choosen' className='uploadImage'></input>
+                    <input  placeholder={this.state.filename} className='uploadImage'></input>
                     <label className="uploadButton"><input type="file"  className='uploadInp' onChange={this.fileSelect}  />Browse</label>
                     
                     </div>
