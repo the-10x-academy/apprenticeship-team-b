@@ -1,6 +1,6 @@
 import React from 'react'
 import "./uploadpage.css";
-import Axios from 'axios';
+//import Axios from 'axios';
 class Upload extends React.Component{
     constructor(){
         super()
