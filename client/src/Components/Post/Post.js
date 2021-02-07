@@ -14,7 +14,7 @@ function Post(props){
             </div>  
 
             <div className='postpage_bikediv' style={{ 
-      backgroundImage: `url(${props.imagepath})`}}>
+      backgroundImage: `url(${"http://localhost:9000/" + props.imagepath})`}}>
             </div>
 
             <div className='postpage_heartshare'>

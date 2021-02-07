@@ -14,7 +14,6 @@ function Header(){
         <text id = "logo">Instaclone</text>
         </div>
         <Link to="/posts/create" style={{ textDecoration: "none" }}><button class = "buttons"><img src = {camera} id = "camera" alt=''></img></button></Link>
-        
     </div>
     );
 }

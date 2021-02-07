@@ -1,13 +1,29 @@
-var mongoose=require('mongoose')
-var Schema=mongoose.Schema
-var schema = new Schema({
-    imagePath:{type:String,required:true},
-    name:{type:String,required:true},
-    location:{type:String,required:true},
-    date:{type : Date, default: Date.now},
-    message:{type:String,required:true},
-    likes:{type:Number,required:true,min:0}
-
+const mongoose = require("mongoose");
+const postSchema = new mongoose.Schema({
+	name: {
+		type: String,
+		required: true,
+	},
+	location: {
+		type: String,
+		required: true,
+	},
+	imagepath: {
+		type: String,
+		required: true,
+	},
+	description: {
+		type: String,
+		required: true,
+	},
+	date: {
+		type: Date,
+		default: Date.now,
+	},
+    likes: {
+        type: Number,
+        default: 0,
+    }
 });
-const Post=mongoose.model('post',schema)
-module.exports=Post;
+
+module.exports = mongoose.model("Post", postSchema);

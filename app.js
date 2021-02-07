@@ -3,25 +3,22 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
-const cors=require('cors')
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+
 const indexRouter = require("./routes/index");
 
 const app = express();
-var mongoose=require('mongoose')
+
+//dbConfig
 mongoose
 	.connect("mongodb://localhost:27017/teamb", {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	})
-	.then(() => console.log("connection Successful"))
+	.then(() => console.log("db connection Successful"))
 	.catch((err) => console.log(err));
-var db=mongoose.connection
-db.on('connected',function(){
-	console.log('mongodb is connected')
-})
-db.off('error',function(){
-	console.log('mongoose default connection done')
-})
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -31,6 +28,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 
 app.use("/", indexRouter);
 
