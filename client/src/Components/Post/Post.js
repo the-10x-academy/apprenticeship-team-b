@@ -10,9 +10,10 @@ function Post({ name, location, description, imagepath, date, likes }){
             <div className='postpage_nameLoc'>
                 <h1 className='postpage_name'>{name}</h1>
                 <h1 className='postpage_location'>{location}</h1>
-            </div>  
-            <img className = 'post__image' src = {"http://localhost:9000/" + imagepath}/>
-                  
+            </div> 
+            <div className='postpage_bikediv'>
+            <img className = 'post__image' src = {"http://localhost:9000/" + imagepath} />
+            </div>    
 
             <div className='postpage_heartshare'>
             <input type="image" src={heart} alt=' ' className='postpage_heart'/>
