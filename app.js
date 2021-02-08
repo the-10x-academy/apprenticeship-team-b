@@ -11,7 +11,6 @@ const indexRouter = require("./routes/index");
 
 const app = express();
 
-//dbConfig
 mongoose
 	.connect("mongodb://localhost:27017/teamb", {
 		useNewUrlParser: true,

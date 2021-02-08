@@ -20,19 +20,20 @@ function Postlistpage() {
 
 	let postarray = [...posts].reverse();
 	return (
-			<div className="Landingpage_div">
-        <ul>
+		<div className="Landingpage_div">
+        	<ul>
 				{postarray.map((post) => (
 					<PostPage
 						name = {post.name}
 						location = {post.location}
-						imagepath = {post.imagepath}
 						description = {post.description}
+						imagepath = {post.imagepath}
 						date = {post.date}
+						likes = {post.likes}
 					/>
 				))}
-				</ul>
-			</div>
+			</ul>
+		</div>
 	);
 }
 export default Postlistpage;

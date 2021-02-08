@@ -27,7 +27,7 @@ function Upload() {
 	const postDetails = async (e) => {
 		console.log("clicked");
 		const data = new FormData();
-		data.append("imagepath", file);
+		data.append("image", file);
 		data.append("description", Description);
 		data.append("name", Author);
 		data.append("location", Location);
@@ -48,7 +48,6 @@ function Upload() {
 
 
     return(
-        <form action='#'>
         <div className='uploadParent' >
             <div className='uploadBox'>
                 <div className='uploadImg'>
@@ -64,21 +63,20 @@ function Upload() {
                     <input onChange={ChangeDesc} className='uploadM' placeholder='Description' ></input>
                 </div>
                 <div className='uploadPost'>
-                    <button onClick={() => {
+                    <button type = "submit" onClick={() => {
 							postDetails();
 							navigate();
 						}} className={
-                        filename!==''&&
-                        Location!== ''&&
-                        Description!==''&&
-                        file!==''
-                        ? "uploadcolorbutton"
-                        :"uploadpostB"
+                        Author !== ""&&
+                        Location !== ""&&
+                        Description !== ""&&
+                        filename !== ""
+						    ? "uploadcolorbutton"
+							: "uploadpostB"
                         }>Post</button>
                 </div>
             </div>
         </div>
-        </form>
 
     );
 }

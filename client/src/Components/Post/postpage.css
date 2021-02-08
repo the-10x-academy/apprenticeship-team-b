@@ -53,15 +53,15 @@ opacity: 1;
     text-align: left;
 }
 
-.postpage_bikediv{
-    display: flex;
-    margin-top: 3px;
-     border: 1px solid #707070;
-     background-size: 100% 100%;
-width: 420px;
+.post__image {
+	object-fit: contain;
+  width: 420px;
 height:300px;
-
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
 }
+
+
 .Landingpage_div{
     display:flex;
     flex-direction: column;
