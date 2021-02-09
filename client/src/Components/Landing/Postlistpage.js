@@ -2,14 +2,34 @@ import React from 'react'
 import './landing.css';
 import PostPage from '../Post/Post'
 class Postlistpage extends React.Component{
-  
+  constructor(){
+    super()
+    this.state={posts:[]}
+  }
+  componentDidMount(){
+    
+    console.log('component did mount')
+    
+    fetch('http://localhost:9000/post')
+    .then(res=>{
+      //console.log(res);
+      return res.json()
+    })
+    .then(posts=>{
+      //console.log(students);
+      this.setState({posts:posts.model})
+    })
+  }
   render(){
+    console.log(this.state.posts)
+    const postarray=[...this.state.posts].reverse()
+    var a=['Jan','Feb','Mar','Apr','May','Jun','jul','Aug','Sep','Oct','Nov','Dec']
     return(
       <div className='Landingpage_div' >
         <ul>
-          {this.props.posts.map((post,id)=>(
-            <PostPage name={this.props.posts[id].name} location={this.props.posts[id].location} message={this.props.posts[id].message} likes={this.props.posts[id].likes}
-            date={this.props.posts[id].date} imagepath={this.props.posts[id].imagepath} /> 
+          {this.state.posts.map((post,id)=>(
+            <PostPage name={postarray[id].name} location={postarray[id].location} message={postarray[id].message} likes={postarray[id].likes}
+            date={postarray[id].date.slice(8,10)+' '+a[parseInt(postarray[id].date.slice(5,7))-1]+' '+postarray[id].date.slice(0,4)} imagepath={postarray[id].imagepath} /> 
           ))}
         </ul>
     </div>
