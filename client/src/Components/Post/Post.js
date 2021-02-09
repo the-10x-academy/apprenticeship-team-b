@@ -16,7 +16,8 @@ function Post(props){
                 <h1 className='postpage_name'>{props.name}</h1>
                 <h1 className='postpage_location'>{props.location}</h1>
             </div>  
-            <img  src = {"http://localhost:9000/" + props.imagepath} />
+            <div className='postpage_bikediv'><img className='post_image'  src = {"http://localhost:9000/" + props.imagepath} /></div>
+            
             
             <div className='postpage_heartshare'>
             <input type="image" src={heart} alt=' ' className='postpage_heart' onClick={likesbutton}/>
