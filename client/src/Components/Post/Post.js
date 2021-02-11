@@ -4,6 +4,7 @@ import Postdetails from './Postdetails'
 import './postpage.css';
 function Post(props){
     console.log(props)
+    
     return(
         <div className='postpage_all'>
         <div className='postpage_box'>
@@ -12,7 +13,7 @@ function Post(props){
                 <h1 className='postpage_location'>{props.location}</h1>
             </div>  
             <Postimage imagepath={props.imagepath} />
-            <Postdetails likes={props.likes} message={props.message} date={props.date} />
+            <Postdetails id={props.id} likes={props.likes} message={props.message} date={props.date} />
         </div>
         </div>
 

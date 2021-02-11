@@ -28,7 +28,7 @@ class Postlistpage extends React.Component{
       <div className='Landingpage_div' >
         <ul>
           {this.state.posts.map((post,id)=>(
-            <PostPage name={postarray[id].name} location={postarray[id].location} message={postarray[id].message} likes={postarray[id].likes}
+            <PostPage id={postarray[id]._id} name={postarray[id].name} location={postarray[id].location} message={postarray[id].message} likes={postarray[id].likes}
             date={postarray[id].date.slice(8,10)+' '+a[parseInt(postarray[id].date.slice(5,7))-1]+' '+postarray[id].date.slice(0,4)} imagepath={postarray[id].imagepath} /> 
           ))}
         </ul>
