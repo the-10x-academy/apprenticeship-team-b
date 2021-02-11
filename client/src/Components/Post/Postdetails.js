@@ -18,10 +18,6 @@ function Postdetails(props){
     }
     return (
         <div>
-            <div className='postpage_nameLoc'>
-                <h1 className='postpage_name'>{props.name}</h1>
-                <h1 className='postpage_location'>{props.location}</h1>
-            </div> 
             <div className='postpage_heartshare'>
             <input type="image" src={heart} alt=' ' className='postpage_heart' onClick={likesbutton}/>
             <input type='image' src={share} alt=' ' className='postpage_share'/>
