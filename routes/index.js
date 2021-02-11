@@ -37,7 +37,6 @@ router.get("/post", function (req, res) {
 });
 
 router.post("/post", upload.single("image"), (req, res, next) => {
-	console.log(req.body,'index')
 	var imageFile = req.file.filename;
 	console.log(req.file.path)
 	var imagePath = req.file.path.replace("public", "");
