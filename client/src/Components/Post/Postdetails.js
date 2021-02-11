@@ -14,12 +14,7 @@ function Postdetails(props){
         data.append("likes",likes)
         data.append("id",props.id)
         console.log(data)
-        fetch('http://localhost:9000/post/' + props.id, {
-            method: 'PUT',
-            body: data,
-            
-        }).then(res => res.json())
-        .then((data)=>console.log(data));
+
     }
     return (
         <div>
@@ -35,7 +30,7 @@ function Postdetails(props){
 
             
             <div className='postpage_messagelikes'>
-            <h1 className='postpage_likes' >{props.likes} likes</h1>
+            <h1 className='postpage_likes' >{likes} likes</h1>
             <h1 className='postpage_message'>{props.message}</h1>
             </div>
         </div>
