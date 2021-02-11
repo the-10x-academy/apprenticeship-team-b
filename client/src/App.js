@@ -13,7 +13,7 @@ function App(){
         <Switch>
         <Route exact path="/" component={Home} />
             <Route exact path ="/posts/create" component = {UploadHeader}/>
-            <Route exact path="/posts" component={Postlist} />
+            <Route exact path="/posts" exact component={Postlist} />
         </Switch>
     </Router>
     );

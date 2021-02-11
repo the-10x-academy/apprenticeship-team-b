@@ -26,9 +26,15 @@ router.get("/post", function (req, res) {
 	Post.find()
 		.then((result) => {
 			res.status(200).json({
+<<<<<<< HEAD
 				postData: result,
 			});
 			console.log(result);
+=======
+				model: result,
+			});
+			//console.log(result);
+>>>>>>> 9d14b514f7228ccbe2c69ed64f69b89826a77d3f
 		})
 		.catch((err) => {
 			console.log(err);
@@ -37,6 +43,7 @@ router.get("/post", function (req, res) {
 });
 
 router.post("/post", upload.single("image"), (req, res, next) => {
+<<<<<<< HEAD
 	var imageFile = req.file.filename;
 	var imagePath = req.file.path.replace("public", "");
 	console.log(imagePath);
@@ -46,15 +53,54 @@ router.post("/post", upload.single("image"), (req, res, next) => {
 		location: req.body.location,
 		imagepath: imagePath,
 	};
+=======
+	console.log(req.body,'index')
+	var imageFile = req.file.filename;
+	console.log(req.file.path)
+	var imagePath = req.file.path.replace("public", "");
+	
+	var obj = {
+		name: req.body.name,
+		message: req.body.message,
+		location: req.body.location,
+		imagepath: imagePath
+	};
+	console.log(imagePath)
+>>>>>>> 9d14b514f7228ccbe2c69ed64f69b89826a77d3f
 	Post.create(obj, (err, item) => {
 		if (err) {
 			console.log(err);
 		} else {
 			// item.save();
+<<<<<<< HEAD
 			res.redirect("/post");
+=======
+			setTimeout(() => {
+				res.redirect("/post");
+			}, 10000);
+			
+>>>>>>> 9d14b514f7228ccbe2c69ed64f69b89826a77d3f
 		}
 	});
 });
+router.put('/post/:id',upload.single("image"), (req, res,next) => { 
+	console.log(req.body)
+	console.log("put")
+	Post.findOneAndUpdate({_id: req.body.id },  
+		{$inc: { likes: 1 }}, null, function (err, docs) { 
+		if (err){ 
+			console.log(err) 
+		} 
+		else{ 
+			console.log('updated')
+			console.log("Original Doc : ",docs); 
+		} 
+	}); 
+  }) 
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 9d14b514f7228ccbe2c69ed64f69b89826a77d3f
 module.exports = router;
