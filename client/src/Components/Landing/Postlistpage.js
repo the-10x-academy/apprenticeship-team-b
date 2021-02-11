@@ -9,19 +9,21 @@ class Postlistpage extends React.Component{
   componentDidMount(){
     
     console.log('component did mount')
+    setInterval(() => {
+      fetch('http://localhost:9000/post')
+      .then(res=>{
+        //console.log(res);
+        return res.json()
+      })
+      .then(posts=>{
+        //console.log(students);
+        this.setState({posts:posts.model})
+      }) 
+    },100);
+
     
-    fetch('http://localhost:9000/post')
-    .then(res=>{
-      //console.log(res);
-      return res.json()
-    })
-    .then(posts=>{
-      //console.log(students);
-      this.setState({posts:posts.model})
-    })
   }
   render(){
-    console.log(this.state.posts)
     const postarray=[...this.state.posts].reverse()
     var a=['Jan','Feb','Mar','Apr','May','Jun','jul','Aug','Sep','Oct','Nov','Dec']
     return(
