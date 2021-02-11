@@ -28,7 +28,7 @@ router.get("/post", function (req, res) {
 			res.status(200).json({
 				model: result,
 			});
-			console.log(result);
+			//console.log(result);
 		})
 		.catch((err) => {
 			console.log(err);
@@ -54,10 +54,27 @@ router.post("/post", upload.single("image"), (req, res, next) => {
 			console.log(err);
 		} else {
 			// item.save();
-			res.redirect("/post");
+			setTimeout(() => {
+				res.redirect("/post");
+			}, 10000);
+			
 		}
 	});
 });
+router.put('/post/:id',upload.single("image"), (req, res,next) => { 
+	console.log(req.body)
+	console.log("put")
+	Post.findOneAndUpdate({_id: req.body.id },  
+		{$inc: { likes: 1 }}, null, function (err, docs) { 
+		if (err){ 
+			console.log(err) 
+		} 
+		else{ 
+			console.log('updated')
+			console.log("Original Doc : ",docs); 
+		} 
+	}); 
+  }) 
 
 
 module.exports = router;
