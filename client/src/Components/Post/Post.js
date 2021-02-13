@@ -3,7 +3,6 @@ import Postimage from './Postimage'
 import Postdetails from './Postdetails'
 import './postpage.css';
 function Post(props){
-    console.log(props)
     
     return(
         <div className='postpage_all'>

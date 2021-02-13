@@ -44,6 +44,7 @@ router.get("/post", function (req, res) {
 
 router.post("/post", upload.single("image"), (req, res, next) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	var imageFile = req.file.filename;
 	var imagePath = req.file.path.replace("public", "");
 	console.log(imagePath);
@@ -55,6 +56,8 @@ router.post("/post", upload.single("image"), (req, res, next) => {
 	};
 =======
 	console.log(req.body,'index')
+=======
+>>>>>>> b794d079bbddc2f4a6c8c1f80f1ab4d8fd6949a3
 	var imageFile = req.file.filename;
 	console.log(req.file.path)
 	var imagePath = req.file.path.replace("public", "");
