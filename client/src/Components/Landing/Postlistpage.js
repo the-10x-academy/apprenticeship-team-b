@@ -1,41 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './landing.css';
 import PostPage from '../Post/Post'
-<<<<<<< HEAD
-function Postlistpage() {
-	const [posts, setPosts] = useState([
-		
-	]);
-
-	useEffect(() => {
-		setTimeout(
-			fetch("http://localhost:9000/post")
-				.then((response) => response.json())
-				.then((result) => {
-					console.log(result);
-					setPosts(result.postData);
-				}),
-			10,
-		);
-	}, []);
-
-	let postarray = [...posts].reverse();
-	return (
-			<div className="Landingpage_div">
-        <ul>
-				{postarray.map((post) => (
-					<PostPage
-						name = {post.name}
-						location = {post.location}
-						imagepath = {post.imagepath}
-						description = {post.description}
-						date = {post.date}
-					/>
-				))}
-				</ul>
-			</div>
-	);
-=======
 class Postlistpage extends React.Component{
   constructor(){
     super()
@@ -120,7 +85,6 @@ Postlistpage.defaultProps={posts:[{
   likes:0,
   date:'31 Jan 2021',
   imagepath: 'images/dog.jpg'
->>>>>>> 9d14b514f7228ccbe2c69ed64f69b89826a77d3f
 }
 export default Postlistpage;
 
