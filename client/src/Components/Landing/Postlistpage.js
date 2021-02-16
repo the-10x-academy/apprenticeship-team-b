@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from 'react'
 import './landing.css';
 import PostPage from '../Post/Post'
 class Postlistpage extends React.Component{
@@ -86,13 +86,6 @@ Postlistpage.defaultProps={posts:[{
   date:'31 Jan 2021',
   imagepath: 'images/dog.jpg'
 }
+
+]}
 export default Postlistpage;
-
-
-
-
-
-
-
-
-

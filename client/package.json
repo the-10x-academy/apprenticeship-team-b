@@ -10,12 +10,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-<<<<<<< HEAD
-    "react-scripts": "^4.0.1",
-=======
     "react-scripts": "4.0.1",
     "react-native": "^0.63.4",
->>>>>>> f1bb80aec47a3d437880453fa6642fd4d67f2208
     "web-vitals": "^0.2.4"
   },
   "scripts": {
