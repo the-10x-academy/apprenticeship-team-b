@@ -11,10 +11,6 @@ const indexRouter = require("./routes/index");
 
 const app = express();
 
-<<<<<<< HEAD
-//dbConfig
-=======
->>>>>>> 9d14b514f7228ccbe2c69ed64f69b89826a77d3f
 mongoose
 	.connect("mongodb://localhost:27017/teamb", {
 		useNewUrlParser: true,
