@@ -1,31 +1,4 @@
 const mongoose = require("mongoose");
-<<<<<<< HEAD
-const postSchema = new mongoose.Schema({
-	name: {
-		type: String,
-		required: true,
-	},
-	location: {
-		type: String,
-		required: true,
-	},
-	imagepath: {
-		type: String,
-		required: true,
-	},
-	description: {
-		type: String,
-		required: true,
-	},
-	date: {
-		type: Date,
-		default: Date.now,
-	},
-    likes: {
-        type: Number,
-        default: 0,
-    }
-=======
 var today = new Date();
 var dd = today.getDate();
 var mm = today.getMonth()+1; 
@@ -66,7 +39,6 @@ var schema = new mongoose.Schema({
     message:{type:String,required:true},
     likes:{type:Number,default:0}
 
->>>>>>> 9d14b514f7228ccbe2c69ed64f69b89826a77d3f
 });
-
-module.exports = mongoose.model("Post", postSchema);
+const Post=mongoose.model('post',schema)
+module.exports=Post;
