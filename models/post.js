@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-var date = String(dd) + " " + month + " " + String(yyyy);
 var schema = new mongoose.Schema({
     imagepath:{type:String,required:true},
     name:{type:String,required:true},
