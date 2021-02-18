@@ -40,6 +40,10 @@ function Upload() {
 			});
     };
 
+	function refreshPage(){
+		window.location.href=".";
+	}
+
 	return(
         <div className='uploadParent' >
             <div className='uploadBox'>
@@ -59,6 +63,7 @@ function Upload() {
 				<Link to="." refresh = "true">
                     <button type = "submit" onClick={() => {
 							postDetails();
+							refreshPage();
 						}} className={
                         name !== ""&&
                         location !== ""&&
