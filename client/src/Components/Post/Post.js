@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import Postimage from './Postimage'
 import Postdetails from './Postdetails'
 import './postpage.css';

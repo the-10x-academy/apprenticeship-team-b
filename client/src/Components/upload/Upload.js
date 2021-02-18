@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./uploadpage.css";
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Upload() {
 	const [filename, setFileName] = useState("");
@@ -8,7 +8,6 @@ function Upload() {
 	const [location, setLocation] = useState("");
 	const [message, setMessage] = useState("");
 	const [file, setFile] = useState("");
-	const history = useHistory();
 	const handleBrowse = (e) => {
 		setFile(e.target.files[0]);
 		setFileName(e.target.files[0].name);
@@ -41,12 +40,7 @@ function Upload() {
 			});
     };
 
-	const navigate = async (e) => {
-		history.push("/posts");
-	};
-
-
-    return(
+	return(
         <div className='uploadParent' >
             <div className='uploadBox'>
                 <div className='uploadImg'>
@@ -62,9 +56,9 @@ function Upload() {
                     <input onChange={ChangeMessage} className='uploadM' placeholder='Description' ></input>
                 </div>
                 <div className='uploadPost'>
+				<Link to="." refresh = "true">
                     <button type = "submit" onClick={() => {
 							postDetails();
-							navigate();
 						}} className={
                         name !== ""&&
                         location !== ""&&
@@ -72,7 +66,7 @@ function Upload() {
                         filename !== ""
 						    ? "uploadcolorbutton"
 							: "uploadpostB"
-                        }>Post</button>
+                        }>Post</button></Link>
 
                 </div>
             </div>

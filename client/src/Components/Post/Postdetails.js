@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
 import './postpage.css';
 import heart from './heart.png'
 import share from './share.png'
+
 
 function Postdetails(props){
     const likesbutton= async (e)=>{

@@ -1,15 +1,21 @@
 import React from 'react'
 import './landing.css';
 import PostPage from '../Post/Post'
+
+
+
 class Postlistpage extends React.Component{
   constructor(){
     super()
     this.state={posts:[]}
   }
+
+  
+
   componentDidMount(){
     
     console.log('component did mount')
-    setInterval(() => {
+    
       fetch('http://localhost:9000/post')
       .then(res=>{
         //console.log(res);
@@ -18,8 +24,8 @@ class Postlistpage extends React.Component{
       .then(posts=>{
         //console.log(students);
         this.setState({posts:posts.model})
-      }) 
-    },100);
+      });
+    
 
     
   }
@@ -36,8 +42,12 @@ class Postlistpage extends React.Component{
         </ul>
     </div>
     )
+    
   }
 }
+
+
+
 Postlistpage.defaultProps={posts:[{
   name:'vaishnavi',
   location:'chennai',
