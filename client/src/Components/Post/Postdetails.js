@@ -1,12 +1,13 @@
 import './postpage.css';
 import heart from './heart.png'
 import share from './share.png'
-
+import { Link } from "react-router-dom";
 
 function Postdetails(props){
     const likesbutton= async (e)=>{
         const data = new FormData();
         data.append("id",props.id)
+        console.log('like',props.id)
         fetch('http://localhost:9000/post/' + props.id, {
             method: 'PUT',
             body: data,
@@ -17,7 +18,8 @@ function Postdetails(props){
     return (
         <div>
             <div className='postpage_heartshare'>
-            <input type="image" src={heart} alt=' ' className='postpage_heart' onClick={likesbutton}/>
+                <Link to="." refresh = "true"><button className='heartbutton'><img className='postpage_heart' src={heart} alt="my image" onClick={likesbutton}/></button></Link>
+            
             <input type='image' src={share} alt=' ' className='postpage_share'/>
             <h1 className='postpage_date'>{props.date}</h1>
             </div>

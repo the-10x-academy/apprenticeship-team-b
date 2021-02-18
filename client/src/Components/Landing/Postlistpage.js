@@ -15,19 +15,27 @@ class Postlistpage extends React.Component{
   componentDidMount(){
     
     console.log('component did mount')
-    
-      fetch('http://localhost:9000/post')
-      .then(res=>{
-        //console.log(res);
-        return res.json()
-      })
-      .then(posts=>{
-        //console.log(students);
-        this.setState({posts:posts.model})
-      });
+    setTimeout(this.fetchdata()  , 10);
     
 
+
     
+  }
+  fetchdata(){
+    fetch('http://localhost:9000/post')
+    .then(res=>{
+      //console.log(res);
+      return res.json()
+    })
+    .then(posts=>{
+      //console.log(students);
+      this.setState({posts:posts.model})
+    });
+
+  }
+  componentDidUpdate(prevProps, prevState){
+    console.log('component did update')
+
   }
   render(){
     const postarray=[...this.state.posts].reverse()
