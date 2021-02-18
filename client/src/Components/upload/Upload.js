@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./uploadpage.css";
-import { Link } from "react-router-dom";
+
 
 function Upload() {
 	const [filename, setFileName] = useState("");
@@ -60,7 +60,7 @@ function Upload() {
                     <input onChange={ChangeMessage} className='uploadM' placeholder='Description' ></input>
                 </div>
                 <div className='uploadPost'>
-				<Link to="." refresh = "true">
+				
                     <button type = "submit" onClick={() => {
 							postDetails();
 							refreshPage();
@@ -71,7 +71,7 @@ function Upload() {
                         filename !== ""
 						    ? "uploadcolorbutton"
 							: "uploadpostB"
-                        }>Post</button></Link>
+                        }>Post</button>
 
                 </div>
             </div>
