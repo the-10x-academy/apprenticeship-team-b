@@ -1,12 +1,11 @@
-var mongoose=require('mongoose')
-var Schema=mongoose.Schema
-var schema = new Schema({
-    imagePath:{type:String,required:true},
+const mongoose = require("mongoose");
+var schema = new mongoose.Schema({
+    imagepath:{type:String,required:true},
     name:{type:String,required:true},
     location:{type:String,required:true},
-    date:{type : Date, default: Date.now},
+    date:{type : Date, default: new Date()},
     message:{type:String,required:true},
-    likes:{type:Number,required:true,min:0}
+    likes:{type:Number,default:0}
 
 });
 const Post=mongoose.model('post',schema)

@@ -1,0 +1,39 @@
+#head{
+    top: 0;
+    position: fixed;
+	width: 100%;
+    background-color: white;
+    display: flex;
+    border-bottom: 1px solid #006238;
+    margin-left: 0px;
+    justify-content: space-between;
+    vertical-align: center;
+    align-items: center;
+}
+
+#insta{
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    font-family: Palatino;
+    font-size: 64px;
+    color: #006238;
+    opacity: 1;
+    padding-top: 20px;
+    padding-bottom: 33px;
+}
+
+#logo{
+    padding-left: 10px;
+}
+
+#camera{
+    opacity: 1;
+}
+
+.buttons{
+    border: none;
+    opacity: 1;
+    background: transparent;
+    margin-right:200px;
+}

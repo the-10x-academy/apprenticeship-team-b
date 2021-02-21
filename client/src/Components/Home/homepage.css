@@ -1,0 +1,46 @@
+.homepageparent{
+	display: grid;
+	place-items: center;
+	background-color: #ffffff;
+	height: 100vh;
+}
+.homepageimage{
+    display: flex;
+	background-color: #ffffff;
+	height: 90vh;
+	width: 60vw;
+}
+.homepagesecond{
+    flex: 0.5;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 23vh 0vh 0vh 9vh;
+}
+.homepageteam{
+    font: normal normal normal 8vh/12vh Palatino;
+	letter-spacing: 0vh;
+	color: #006238;
+	opacity: 1;
+	margin-bottom: 3vh;
+}
+.homepagei{
+    flex: 0.5;
+	display: flex;
+}
+.homepageenter{
+    display: flex;
+	width: 16vh;
+	height: 8vh;
+	
+	font: normal normal normal 4.5vh/6vh Verdana;
+	letter-spacing: 0vh;
+	color: #006238;
+	opacity: 1;
+	background: #ffffff;
+	border: 0.5vh solid #006238;
+	border-radius: 2vh;
+    text-align: center;
+	padding: 0vh 1vh 1vh 1vh;
+
+}
