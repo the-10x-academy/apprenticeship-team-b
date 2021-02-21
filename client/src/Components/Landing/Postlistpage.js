@@ -15,7 +15,7 @@ class Postlistpage extends React.Component{
   componentDidMount(){
     
     console.log('component did mount')
-    setTimeout(this.fetchdata()  , 10);
+    this.fetchdata();
     
 
 
