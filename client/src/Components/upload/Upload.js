@@ -37,13 +37,12 @@ function Upload() {
 		})
 			.then((res) => res.json())
 			.then((data) => {
-				console.log(data);
+				history.push('/posts');
 			});
+			
     };
 
-	function refreshPage(){
-		history.push("/posts");
-	}
+	
 
 	return(
         <div className='uploadParent' >
@@ -64,7 +63,7 @@ function Upload() {
 				
                     <button type = "submit" onClick={() => {
 							postDetails();
-							refreshPage();
+							//refreshPage();
 						}} className={
                         name !== ""&&
                         location !== ""&&

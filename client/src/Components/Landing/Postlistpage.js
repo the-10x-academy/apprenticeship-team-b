@@ -14,9 +14,7 @@ class Postlistpage extends React.Component{
 
   async componentDidMount(){
     console.log('cdm')
-    setTimeout(() => {
-      this.fetchdata();
-    }, 10);
+    this.fetchdata();
     
     
 
@@ -24,7 +22,7 @@ class Postlistpage extends React.Component{
     
   }
   async fetchdata(){
-    await fetch('http://localhost:9000/post')
+    fetch('http://localhost:9000/post')
     .then(res=>{
       //console.log(res);
       return res.json()
