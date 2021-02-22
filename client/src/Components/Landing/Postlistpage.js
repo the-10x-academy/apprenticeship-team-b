@@ -13,9 +13,10 @@ class Postlistpage extends React.Component{
   
 
   componentDidMount(){
+    setTimeout(() => {
+      this.fetchdata();
+    }, 10);
     
-    console.log('component did mount')
-    this.fetchdata();
     
 
 
@@ -31,10 +32,6 @@ class Postlistpage extends React.Component{
       //console.log(students);
       this.setState({posts:posts.model})
     });
-
-  }
-  componentDidUpdate(prevProps, prevState){
-    console.log('component did update')
 
   }
   render(){

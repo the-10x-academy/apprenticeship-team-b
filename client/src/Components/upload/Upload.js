@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./uploadpage.css";
-
+import { useHistory } from "react-router-dom";
 
 function Upload() {
 	const [filename, setFileName] = useState("");
@@ -8,10 +8,10 @@ function Upload() {
 	const [location, setLocation] = useState("");
 	const [message, setMessage] = useState("");
 	const [file, setFile] = useState("");
+	const history = useHistory();
 	const handleBrowse = (e) => {
 		setFile(e.target.files[0]);
 		setFileName(e.target.files[0].name);
-		console.log(e.target.files[0]);
 	};
 	const ChangeName = (e) => {
 		setName(e.target.value);
@@ -24,6 +24,7 @@ function Upload() {
 	};
 
 	const postDetails = async (e) => {
+		console.log('post')
 		console.log("clicked");
 		const data = new FormData();
 		data.append("image", file);
@@ -41,7 +42,7 @@ function Upload() {
     };
 
 	function refreshPage(){
-		window.location.href=".";
+		history.push("/posts");
 	}
 
 	return(

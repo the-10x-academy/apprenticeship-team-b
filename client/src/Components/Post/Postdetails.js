@@ -1,10 +1,12 @@
 import './postpage.css';
 import heart from './heart.png'
 import share from './share.png'
-
+import { useHistory } from "react-router-dom";
 function Postdetails(props){
+    const history = useHistory();
     const likesbutton= async (e)=>{
         const data = new FormData();
+        
         data.append("id",props.id)
         console.log('like',props.id)
         fetch('http://localhost:9000/post/' + props.id, {
@@ -13,7 +15,7 @@ function Postdetails(props){
             
         }).then(res => res.json())
         .then((data)=>console.log(data));
-        window.location.href=".";
+        history.push("/posts");
     }
     return (
         <div>
