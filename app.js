@@ -6,13 +6,13 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
+const PORT=process.env.PORT || 8080
 const indexRouter = require("./routes/index");
 
 const app = express();
 
 mongoose
-	.connect("mongodb://localhost:27017/teamb", {
+	.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/teamb", {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	})
@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 app.use("/", indexRouter);
-
+app.listen(PORT)
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
 	next(createError(404));
