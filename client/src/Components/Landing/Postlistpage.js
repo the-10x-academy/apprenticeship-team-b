@@ -12,7 +12,7 @@ class Postlistpage extends React.Component{
 
   
 
-  componentDidMount(){
+  async componentDidMount(){
     console.log('cdm')
     setTimeout(() => {
       this.fetchdata();
