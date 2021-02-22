@@ -23,6 +23,7 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 router.get("/post", function (req, res) {
+	
 	Post.find()
 		.then((result) => {
 			res.status(200).json({
@@ -37,6 +38,7 @@ router.get("/post", function (req, res) {
 });
 
 router.post("/post", upload.single("image"), (req, res, next) => {
+	console.log('post')
 	var imageFile = req.file.filename;
 	console.log(req.file.path)
 	var imagePath = req.file.path.replace("public", "");
