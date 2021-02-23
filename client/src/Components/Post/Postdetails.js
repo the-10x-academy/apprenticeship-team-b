@@ -1,10 +1,14 @@
 import './postpage.css';
 import heart from './heart.png'
 import share from './share.png'
-
+import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
 function Postdetails(props){
+    const [likes,setLike]=useState(props.likes);
+    const history = useHistory();
     const likesbutton= async (e)=>{
         const data = new FormData();
+        
         data.append("id",props.id)
         console.log('like',props.id)
         fetch('http://localhost:9000/post/' + props.id, {
@@ -13,7 +17,8 @@ function Postdetails(props){
             
         }).then(res => res.json())
         .then((data)=>console.log(data));
-        window.location.href=".";
+        history.push("/posts");
+        setLike(likes+1)
     }
     return (
         <div>
@@ -26,7 +31,7 @@ function Postdetails(props){
 
             
             <div className='postpage_messagelikes'>
-            <h1 className='postpage_likes' >{props.likes} likes</h1>
+            <h1 className='postpage_likes' >{likes} likes</h1>
             <h1 className='postpage_message'>{props.message}</h1>
             </div>
         </div>

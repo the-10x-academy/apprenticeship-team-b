@@ -23,6 +23,7 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 router.get("/post", function (req, res) {
+	
 	Post.find()
 		.then((result) => {
 			res.status(200).json({

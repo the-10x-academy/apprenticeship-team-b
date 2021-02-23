@@ -12,16 +12,16 @@ class Postlistpage extends React.Component{
 
   
 
-  componentDidMount(){
-    
-    console.log('component did mount')
+  async componentDidMount(){
+    console.log('cdm')
     this.fetchdata();
+    
     
 
 
     
   }
-  fetchdata(){
+  async fetchdata(){
     fetch('http://localhost:9000/post')
     .then(res=>{
       //console.log(res);
@@ -31,10 +31,6 @@ class Postlistpage extends React.Component{
       //console.log(students);
       this.setState({posts:posts.model})
     });
-
-  }
-  componentDidUpdate(prevProps, prevState){
-    console.log('component did update')
 
   }
   render(){
