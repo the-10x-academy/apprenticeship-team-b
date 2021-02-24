@@ -54,10 +54,7 @@ router.post("/post", upload.single("image"), (req, res, next) => {
 			console.log(err);
 		} else {
 			// item.save();
-			setTimeout(() => {
-				res.redirect("/post");
-			}, 10000);
-			
+			res.redirect("/post");
 		}
 	});
 });
@@ -74,7 +71,18 @@ router.put('/post/:id',upload.single("image"), (req, res,next) => {
 			console.log("Original Doc : ",docs); 
 		} 
 	}); 
-  }) 
+  });
 
-
+router.delete('/post/:id',upload.single("image"), (req, res, next) =>{
+	Post.remove({_id: req.body.id},
+		function (err, docs) { 
+			if (err){ 
+				console.log(err) 
+			} 
+			else{ 
+				console.log('deleted')
+				console.log("Original Doc : ",docs); 
+			} 
+		});
+});
 module.exports = router;

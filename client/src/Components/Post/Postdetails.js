@@ -1,31 +1,45 @@
 import './postpage.css';
-import heart from './heart.png'
-import share from './share.png'
+import bin from './bin.png'
 import { useHistory } from "react-router-dom";
 import React, { useState } from "react";
 function Postdetails(props){
     const [likes,setLike]=useState(props.likes);
+    const [likestatus, setLikeStatus] = useState(false);
     const history = useHistory();
-    const likesbutton= async (e)=>{
+    const deletebutton = async(e) =>{
         const data = new FormData();
-        
         data.append("id",props.id)
-        console.log('like',props.id)
         fetch('http://localhost:9000/post/' + props.id, {
-            method: 'PUT',
+            method: 'DELETE',
             body: data,
-            
         }).then(res => res.json())
-        .then((data)=>console.log(data));
-        history.push("/posts");
-        setLike(likes+1)
-    }
+        .then(()=>console.log(".")
+        );
+        window.location.href="";
+    };
+    const likesbutton= async (e)=>{
+        if (!likestatus){
+            setLikeStatus(true);
+            const data = new FormData();
+            data.append("id",props.id)
+            console.log('like',props.id)
+            fetch('http://localhost:9000/post/' + props.id, {
+                method: 'PUT',
+                body: data,
+            }).then(res => res.json())
+            .then((data)=>console.log(data));
+            setLike(likes+1)
+            } 
+        }
+        function refreshPage(){
+            window.location.href=".";
+        }
     return (
         <div>
             <div className='postpage_heartshare'>
-                <button className='heartbutton'><img className='postpage_heart' src={heart} alt="my image" onClick={likesbutton}/></button>
+                <button className='heartbutton' onClick={likesbutton}><img className='postpage_heart' src={!likestatus ? '/heart.png' : '/heart2.png'} alt="my image" /></button>
             
-            <input type='image' src={share} alt=' ' className='postpage_share'/>
+            <button className='deletebutton' onClick={deletebutton}><img className='postpage_share' src={bin} alt="del" /></button>
             <h1 className='postpage_date'>{props.date}</h1>
             </div>
 
